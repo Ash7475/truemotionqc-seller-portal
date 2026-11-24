@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Lobster&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Yellowtail&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Vintage Scripter';
+  src: url('/fonts/VintageScripter.ttf') format('truetype'),
+       url('/fonts/VintageScripter.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-display: 'Vintage Scripter', 'Yellowtail', 'Lobster', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-cobalt: #0A22B8;
+  --color-cobalt-hover: #081B9A;
+  --color-cobalt-dark: #071991;
+  --color-ice-blue: #EAF0FF;
+  --color-canvas: #F5F8FE;
+  --color-surface: #FFFFFF;
+  --color-border-subtle: #E6ECF5;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #F5F8FE;
+    background-image: linear-gradient(to right, #E7EEF9 1px, transparent 1px), linear-gradient(to bottom, #E7EEF9 1px, transparent 1px);
+    background-size: 36px 36px;
+    color: #0F172A;
+    min-height: 100vh;
+  }
+
+  .font-display {
+    font-family: 'Vintage Scripter', 'Yellowtail', 'Lobster', cursive;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+
+  .font-mono, [data-tabular="true"], .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+}
+
+.bg-canvas-grid {
+  background-color: #F5F8FE;
+  background-image: linear-gradient(to right, #E7EEF9 1px, transparent 1px), linear-gradient(to bottom, #E7EEF9 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.card-surface {
+  background-color: #FFFFFF;
+  border: 1px solid #E6ECF5;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(10, 34, 184, 0.04);
+}
+
+@media (min-width: 640px) {
+  h1, h2, h3 {
+    margin-bottom: 1rem; /* mb-4 */
+  }
+}
+
+/* Distinct Multi-Size Typographic Scale */
+.hero-title {
+  font-family: 'Vintage Scripter', 'Yellowtail', 'Lobster', cursive;
+  font-size: 1.875rem; /* 30px on mobile */
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem; /* 40px on desktop */
+    margin-bottom: 1rem;
+  }
+}
+
+.section-title {
+  font-family: 'Vintage Scripter', 'Yellowtail', 'Lobster', cursive;
+  font-size: 1.75rem; /* 28px */
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 640px) {
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.card-title {
+  font-family: 'Vintage Scripter', 'Yellowtail', 'Lobster', cursive;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.body-standard {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.6;
+}
+
+.meta-badge {
+  font-size: 0.75rem; /* 12px */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Subtle modern scrollbar matching cobalt & ice blue palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 34, 184, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 34, 184, 0.35);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

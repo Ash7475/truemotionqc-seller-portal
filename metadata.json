@@ -1,0 +1,6 @@
+{
+  "name": "TrueMotion QC Seller Atelier",
+  "description": "TrueMotion QC Quality Control & Seller Atelier — high-end luxury marketplace merchant terminal for watches, apparel, electronics, and verified goods.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
